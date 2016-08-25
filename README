@@ -1,5 +1,5 @@
 # GoWeb
-	
+
 	
 # Introduction
 	This WEB is an go web demo, now including WEB API used and mongodb DataBase.
@@ -21,13 +21,13 @@ Project Directory:
 			|-- log (business logs)
 			|-- tests (test cases)	
 		|--	docs
-
+		
 Function Call:
-    WebMain --> 	serves --> controllers --> daos(mgodaos/mysqldaos) --> models & conf
-
+	WebMain --> serves --> controllers --> daos(mgodaos/mysqldaos) --> models & conf
+	
 Developers:
 	coder4869@gmail.com
-
+	
 Depends:
 	"github.com/coder4869/golibs"
 	"gopkg.in/mgo.v2"
