@@ -1,0 +1,7 @@
+{
+	"Type":"mongodb",
+	"User":"goweb_test",
+	"Pwd":"goweb_test",
+	"Ip":"127.0.0.1:10001",
+	"Name":"goweb_test"
+}
