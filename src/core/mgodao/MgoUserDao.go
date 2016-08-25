@@ -105,7 +105,7 @@ func GetAllUsersInfo() []models.MgoUser {
 func UpdateUserInfo(query bson.M, change bson.M) bool {
 
 	updat := func(c *mgo.Collection) error {
-		return c.Update(updat, change)
+		return c.Update(query, change)
 	}
 
 	err := GetDBCollection("MgoUser", updat)
