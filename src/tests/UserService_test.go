@@ -85,8 +85,6 @@ func Benchmark_UserAddServeParallel(b *testing.B) {
 		for pb.Next() {
 			reqURL := reqIP + "/goweb/user/add?param="
 			reqURL += newUserParam()
-			fmt.Println(reqURL)
-
 			go glnet.GETReqWithURL(reqURL)
 		}
 	})
@@ -98,8 +96,6 @@ func Benchmark_UserAddServe(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		reqURL := reqIP + "/goweb/user/add?param="
 		reqURL += newUserParam()
-
-		fmt.Println(reqURL)
 		go glnet.GETReqWithURL(reqURL)
 	}
 }
