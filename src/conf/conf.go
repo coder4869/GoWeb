@@ -26,6 +26,8 @@ THE SOFTWARE.
 package conf
 
 import (
+	"path/filepath"
+	"runtime"
 	"strings"
 
 	"github.com/coder4869/golibs/glfile"
@@ -51,7 +53,10 @@ called in "core/mysqldao/MysqlBaseDao.go" or "core/mgodao/MgoBaseDao.go"
 func LoadDBJsonConf() {
 	// if file "./conf/DBConf.json" not found while running,
 	// please replace relative path as absolute path and try again
-	err := glfile.FillObjWithJsonFile(&DB, "./conf/DBConf.json")
+	//	err := glfile.FillObjWithJsonFile(&DB, "./conf/DBConf.json")
+	_, conf_go, _, _ := runtime.Caller(0) //file info of current file
+	dirPath := filepath.Dir(conf_go)      //dir of conf.go
+	err := glfile.FillObjWithJsonFile(&DB, dirPath+"/DBConf.json")
 	if err != nil {
 		glio.FLPrintf("Load DB Json Config Error:%v\n", err)
 	} else {
