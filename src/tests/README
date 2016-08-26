@@ -3,11 +3,11 @@ Run:
  	$ go test -bench=".*"
 Result:
 	PASS
-	#Benchmark    function name	    CPU	   loop times	 each loop's time
-	Benchmark_UserAddServeParallel-4	         200000	         7011 ns/op
-	Benchmark_TestUserAddServe-4        	    1000000	         3906 ns/op
-	#       run dir    total run time
-	ok  	test		22.624s
+	#Benchmark	function name		CPU		loop times		each loop's time
+	Benchmark_UserAddServeParallel-4		50000				32484 ns/op
+	Benchmark_TestUserAddServe-4			50000				39025 ns/op
+	#     run dir    total run time
+	ok  	test		4.416s
 
 2.Usual Test
 Run:
