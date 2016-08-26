@@ -1,4 +1,15 @@
+# Current Version (0.1.1 beta)
+
+FUNCTIONS APPENDING & FIX
+1. Auto Read DBConf.json file
+
+
 # Version 0.1 beta
-	
+
+FUNCTIONS
+1. support mongodb and mysql connection with DBConf.json file
+2. simple testing example
+3. log‘s functions
+4. example project structure
 	
 	
